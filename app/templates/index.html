@@ -32,10 +32,11 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Updated</th>
                                     <th>Title</th>
                                     <th>Description</th>
                                     <th>Status</th>
-                                    <th>Date</th>
+                                    <th>Due Date</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
@@ -44,6 +45,7 @@
                                     {% for todo in todos %}
                                     <tr>
                                         <td>{{forloop.counter}}</td>
+                                        <td>{{todo.updated}}</td>
                                         <td>{{todo.title}}</td>
                                         <td>{{todo.description}}</td>
                                         <td>{{todo.status}}</td>
