@@ -19,7 +19,14 @@
             </div>
             <div class = "col">
                 <div class = "border">
-                    
+
+                    {% if todos|length == 0 %}
+                        <div class = "alert alert-info">
+                            <p class = "display-4">NO TODOS</p>
+                        </div>
+
+
+                    {% else %}
                     <div>
                         <table class = "table">
                             <thead>
@@ -49,6 +56,11 @@
                             </tbody>
                         </table>
                     </div>
+
+
+                    {% endif %}
+                    
+                    
                 </div>
             </div>
         </div>
