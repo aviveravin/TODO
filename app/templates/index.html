@@ -38,6 +38,7 @@
                                     <th>Status</th>
                                     <th>Due Date</th>
                                     <th>Delete</th>
+                                    <th>Update</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -51,6 +52,7 @@
                                         <td>{{todo.status}}</td>
                                         <td>{{todo.date}}</td>
                                         <td><a href="/delete-todo/{{todo.id}}" class = "btn btn-danger">Delete</a></td>
+                                        <td><a href="/update-todo/{{todo.id}}" class = "btn btn-danger">Update</a></td>
                                     </tr>
                                     {% endfor %}
                                 

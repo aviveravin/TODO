@@ -82,6 +82,19 @@ def delete_todo(request,id):
     TODO.objects.get(pk = id).delete()
     return redirect('home')
 
+def update_todo(request,id):
+    print(id)
+    TODO.objects.get(pk = id)
+    form = TODOForm(request.POST)
+    if request.method == 'POST':
+        form = TODOForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+
+    context = {'form' : form}
+    return render( request , 'update.html' , context)
+
 def signout(request):
     logout(request)
     return redirect('login')

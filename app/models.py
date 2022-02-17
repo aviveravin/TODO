@@ -15,3 +15,4 @@ class TODO(models.Model):
     status = models.CharField(max_length=2 , choices=status_choices)
     date = models.DateField()
 
+
